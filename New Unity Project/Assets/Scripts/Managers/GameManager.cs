@@ -67,6 +67,7 @@ public class GameManager : MonoBehaviour
         if (m_GameWinner != null)
         {
             SceneManager.LoadScene(0);
+            /*Application.LoadLevel(Application.loadedLevel);*/
         }
         else
         {
