@@ -47,6 +47,18 @@ public class TankHealth : MonoBehaviour
             OnDeath();
         }
     }
+    public void GetHealing(float amount)
+    {
+        // Adjust the tank's current health, update the UI based on the new health and check whether or not the tank is dead.
+        m_CurrentHealth += amount;
+        
+        if (m_CurrentHealth >= 100.0f && !m_Dead)
+        {
+            m_CurrentHealth = 100.0f;
+        }
+
+        SetHealthUI();
+    }
 
 
     private void SetHealthUI()
